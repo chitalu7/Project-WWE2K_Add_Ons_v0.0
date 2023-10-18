@@ -1,0 +1,61 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+#main{
+    background-color: black;
+    margin: 0 auto;
+    text-align: center;     
+}
+
+#wweLogo{
+    width: 480px;
+    height: 300px;
+    
+}
+
+img.responsive{
+	width:50%;
+	height:auto;
+}
+
+#namesTable{
+	border: 1px solid white;
+	table-layout: fixed;
+	margin: 0 auto;
+	float: left; 
+	width: 100%;
+	clear: both;	 
+}
+
+#deleteDownloadButtonsPanel{
+	float: right;
+	top: 0;
+    right: 0;		
+}
+
+#buttonDeleteSelectedNames{
+    display: inline;
+}
+
+
+#tableViewContainer{
+    position: relative; 
+	width: 50%;
+    margin: 0 auto;
+
+
+}
+
+tr:nth-child(even){
+    background-color: #cd5c5c;
+}
+
+
+td, th, tr, thead, tbody{
+	text-align: center;
+	border: 1px solid white;
+}
+
+
