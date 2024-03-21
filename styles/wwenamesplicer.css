@@ -15,6 +15,33 @@ body{
     
 }
 
+#about-section {
+	width: 50%;
+	margin: 0 auto;
+	background-color: #494F55;
+	border-radius: 4px;
+	padding: 2px 10px;
+}
+
+.instructions-section{
+	width: 50%;
+    margin: 0 auto;
+    background-color: #494F55;
+    border-radius: 4px;
+	padding: 2px 10px;
+}
+
+.instruction-table {
+	vertical-align: middle;
+	text-align: center;
+	width: 80%;
+	margin: 10px auto;	
+}
+
+.instruction-table tr {
+	background-color: transparent !important;
+}
+
 img.responsive{
 	width:50%;
 	height:auto;
