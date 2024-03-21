@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<head>
+    <title>WWE2K Name Splicer</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/> <!-- makes web app fully scalable on all screens-->
+    
+    <!--CSS Links-->
+    <link rel="stylesheet" href="styles/wwenamesplicer.css"/>   
+</head>
+
+
+<body>
+    <div id="main">
+        <image src="images/wwe2klogo.png" id="wweLogo" alt="WWE 2k logo"></image> 
+        <br>
+        <h1>WWE2K CAW Name Splicer Companion App</h1>
+
+        <h3>About</h3>
+        <section id="about-section">
+            <p>A simple companion app for the create-a-wrestler for WWE2K series that allows users to randomly generate names for their custom created wrestlers (CAWs).</p>
+            <p><b>Languages: </b> HTML, CSS & JavaScript</p>
+            
+        </section>
+
+        <h3>Instructions</h3>
+
+        <section class="instructions-section">
+            <table class="instruction-table">
+                <thead>
+                    <tr>
+                        <th>Step</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Click the <b>"Choose File"</b> button to upload a ".txt" or ".csv" file with names from the CAW mode in your WWE2K game.<br>
+                            The names should be seperated by a new line with only one name on each line</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Once you select your file and upload it to the app, a table of unique names is <br>
+                            dynamically created from your name list with no repititions. </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Scroll through your newly generated name list and check any names in the far right <br>
+                            <b>"Delete"</b> column that you would want to exclude from your list.</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Once you make it all the way down to your name list, click the <b>"Delete Selected Names"</b> <br>
+                            button and click the <b>"Download As PDF"</b> button.</td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>The file automatically downloads the .pdf file to your default downloads folder on your browser <br>
+                        You are all set!</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>To start over, simply refresh the page in the browser<br></td>
+                    </tr>
+                  
+                </tbody>
+            </table>
+            <!-- <ol>
+                <li><p>Upload a ".txt" or ".csv" file with names from the CAW mode in your WWE2K game.</p></li>
+                <li><p>The names should be seperated by a new line with only one name on each line.</p></li>
+            </ol> -->
+            <hr />
+        </section>
+        
+         <br>
+         <br><br>
+        Have fun!!!   
+
+        <br>
+
+        <input type="file" id="uploadFile"/>
+
+        <div id="tableViewContainer">
+
+                <div id="deleteDownloadButtonsPanel"> 
+                    <button type="button" id="buttonDownloadAsPDF" onclick="exportPDFFile()">Download As PDF</button>
+
+                    <button type="button" id="buttonDeleteSelectedNames" onclick="deleteRow()">Delete Selected Names</button>
+                </div>      
+
+        </div>
+
+        
+        <p id="printView1"></p>
+
+
+
+    </div>
+
+  
+
+    
+    
+
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+    crossorigin="anonymous"></script>
+
+    <script src="script/tableHTMLExport.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.5/jspdf.plugin.autotable.min.js"></script>
+
+
+
+    <script src="script/wwescript.js"></script>
+
+    
+</body>
+   
+    
+
+
+
+
+</html>

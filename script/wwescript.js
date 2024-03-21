@@ -117,9 +117,11 @@ document.getElementById("uploadFile").onchange = function(){
         //Loop to read through each of the lines and place
         //names in the "arrayOfNames" array
         for (let line = 0; line < lines.length; line++){
-            if (lines[line].toString().length > 1){
+            // if you want to include single letters change the value of the '>' right value to 1
+            if (lines[line].toString().length > 2){
                 arrayOfNames.push(lines[line]);
             }
+            
 
         }  
 
@@ -187,7 +189,7 @@ function namesTableGenerator(){
 
     //function (named) - "generateTableHead" - handles generating closing table tags
     function generateClosingTable(){
-        closingTable = "<table/> <br>";        
+        closingTable = "<table/> <br><br>";        
     }
 
     //function (named) - "generateDeleteButton" - generates a delete button to use to delete rows with. 
