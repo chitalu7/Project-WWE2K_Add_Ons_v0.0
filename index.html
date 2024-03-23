@@ -6,27 +6,38 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/> <!-- makes web app fully scalable on all screens-->
     
     <!--CSS Links-->
-    <link rel="stylesheet" href="/styles/wwenamesplicer.css"/>   
+    <link rel="stylesheet" href="styles/wwenamesplicer.css"/>  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+ 
+    <!-- <style>
+        .custom-row-stripes {
+            background-color: #cd5c5c; /* Custom stripe color */
+        }
+    </style> -->
 </head>
 
 
 <body>
     <div id="main">
-        <image src="/images/wwe2klogo.png" id="wweLogo" alt="WWE 2k logo"></image> 
+        <image src="images/wwe2klogo.png" id="wweLogo" alt="WWE 2k logo"></image> 
         <br>
         <h1>WWE2K CAW Name Splicer Companion App</h1>
 
         <h3>About</h3>
-        <section id="about-section">
-            <p>A simple companion app for the create-a-wrestler for WWE2K series that allows users to randomly generate names for their custom created wrestlers (CAWs).</p>
-            <p><b>Languages: </b> HTML, CSS & JavaScript</p>
+        <section id="about-section" class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p>A simple companion app for the create-a-wrestler for WWE2K series that allows users to randomly generate names for their custom created wrestlers (CAWs).</p>
+                    <p><b>Languages: </b> HTML, CSS & JavaScript</p>
+                </div>
+            </div>
             
         </section>
 
         <h3>Instructions</h3>
 
-        <section class="instructions-section">
-            <table class="instruction-table">
+        <section class="table-responsive instructions-section">
+            <table class="instruction-table table table-striped">
                 <thead>
                     <tr>
                         <th>Step</th>
@@ -71,26 +82,34 @@
                 <li><p>Upload a ".txt" or ".csv" file with names from the CAW mode in your WWE2K game.</p></li>
                 <li><p>The names should be seperated by a new line with only one name on each line.</p></li>
             </ol> -->
-            <hr />
         </section>
+
+        <hr />
+
         
          <br>
-         <br><br>
-        Have fun and enjoy!!!   
+        <h3>Have fun!!!</h3> 
 
         <br>
+        <section id="upload-section">
+            <input type="file" id="uploadFile"/>
+        </section>
+        
+        <section>
+            <div id="tableViewContainer" class="table-responsive">
 
-        <input type="file" id="uploadFile"/>
-
-        <div id="tableViewContainer">
-
+                <hr/>
                 <div id="deleteDownloadButtonsPanel"> 
-                    <button type="button" id="buttonDownloadAsPDF" onclick="exportPDFFile()">Download As PDF</button>
+                    <button type="button" class="btn btn-success" id="buttonDownloadAsPDF" onclick="exportPDFFile()">Download As PDF</button>
 
-                    <button type="button" id="buttonDeleteSelectedNames" onclick="deleteRow()">Delete Selected Names</button>
+                    <button type="button" class="btn btn-danger" id="buttonDeleteSelectedNames" onclick="deleteRow()">Delete Selected Names</button>
                 </div>      
 
-        </div>
+            </div>
+
+        </section>
+
+        
 
         
         <p id="printView1"></p>
@@ -109,15 +128,17 @@
     integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
     crossorigin="anonymous"></script>
 
-    <script src="/script/tableHTMLExport.js"></script>
+    <script src="script/tableHTMLExport.js"></script>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.5/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.5/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 
 
-    <script src="/script/wwescript.js"></script>
+
+    <script src="script/wwescript.js"></script>
 
     
 </body>

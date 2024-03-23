@@ -118,8 +118,17 @@ document.getElementById("uploadFile").onchange = function(){
         //names in the "arrayOfNames" array
         for (let line = 0; line < lines.length; line++){
             // if you want to include single letters change the value of the '>' right value to 1
-            if (lines[line].toString().length > 2){
+            if (lines[line].toString().length >= 2){
                 arrayOfNames.push(lines[line]);
+
+
+                // if (typeof lines[line].toString() === 'undefined'){
+                //     console.log("Found undefined line");
+                //     arrayOfNames.push("Jackson");
+                // }
+                // else{
+                //     arrayOfNames.push(lines[line]);
+                // }
             }
             
 
@@ -173,7 +182,7 @@ function namesTableGenerator(){
 
     //function (named) - "generateTableHead" - handles generating table opening tags
     function generateOpeningTable(){
-        openingTable = "<table id=\"namesTable\">";
+        openingTable = "<table id=\"namesTable\" class=\"table table-striped custom-table-stripes\">";
     }
 
     //function (named) - "generateTableHead" - handles generating tablehead
@@ -182,12 +191,12 @@ function namesTableGenerator(){
         
     }
 
-    //function (named) - "generateTableHead" - handles generating tableRows
+    //function (named) - "generateTableRows" - handles generating tableRows
     function generateTableRows(){
         //
     }
 
-    //function (named) - "generateTableHead" - handles generating closing table tags
+    //function (named) - "generateClosingTable" - handles generating closing table tags
     function generateClosingTable(){
         closingTable = "<table/> <br><br>";        
     }
@@ -229,9 +238,20 @@ function randomNamesGenerator(arrayOfNamesToUse, fName, nName, lName, randomInde
                 nameSelect();
         }
         else{
-                tableRows += "<tr id =\" row" + rowIdCounter + "\"><td>" + fName + "</td><td>" + nName + "</td> <td>" + lName + "</td><td><input type=\"Checkbox\" id =\"" + rowIdCounter + "\"></td></tr>";
-                masterRowsIdTracker.push(rowIdCounter);
-                rowIdCounter++;
+                if ((rowIdCounter%2) == 1){
+                    tableRows += "<tr id =\" row" + rowIdCounter + "\"><td>" + fName + "</td><td>" + nName + "</td> <td>" + lName + "</td><td><input type=\"Checkbox\" id =\"" + rowIdCounter + "\"></td></tr>";
+                    masterRowsIdTracker.push(rowIdCounter);
+                    rowIdCounter++;
+
+                    // Work in progress to have custom colored rows...
+                }   
+                else {
+                    tableRows += "<tr id =\" row" + rowIdCounter + " \"class=\"custom-row-stripes" + "\"><td>" + fName + "</td><td>" + nName + "</td> <td>" + lName + "</td><td><input type=\"Checkbox\" id =\"" + rowIdCounter + "\"></td></tr>";
+                    masterRowsIdTracker.push(rowIdCounter);
+                    rowIdCounter++;
+
+                }         
+                
             }		
     }
 
